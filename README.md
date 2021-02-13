@@ -15,3 +15,34 @@ and Cocoapods
 ### Contribute
 
 1- Always run `swift test --generate-linuxmain` whenever new test functions are added or removed
+
+
+
+### Pulling upstream changes
+
+If you don't have `upstream-master` yet, create it
+
+```
+git remote add upstream https://github.com/google/flatbuffers
+git fetch upstream
+git checkout -b upstream-master upstream/master
+```
+Pull the latest changes from upstream into `upstream-swift`
+
+```
+git checkout upstream-master
+git pull
+git subtree split --prefix=swift --onto upstream-swift -b upstream-swift
+```
+Rebase our changes (if any) onto `upstream-swift`
+
+```
+git checkout main
+git rebase upstream-swift
+```
+Finally, push the changes to our fork
+
+```
+git push origin main
+```
+
