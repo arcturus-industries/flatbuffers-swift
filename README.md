@@ -1,6 +1,6 @@
 FlatBuffers swift can be found in both SPM
 
-`.package(url: "https://github.com/mustiikhalil/flatbuffers.git", from: "X.Y.Z"),`
+`.package(url: "https://github.com/arcturus-industries/flatbuffers-swift.git", from: "X.Y.Z"),`
 
 and Cocoapods
 
